@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Checkpoint 1
-  - Checkpoint 2
+  - Checkpoint
+  - Bullet
   layers:
   - Default
   - TransparentFX

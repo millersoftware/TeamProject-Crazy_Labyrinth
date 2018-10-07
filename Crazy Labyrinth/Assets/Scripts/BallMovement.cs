@@ -5,7 +5,8 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour {
     public float speed;
     private Rigidbody rb;
-    public GameObject currentcheckpoint;
+    private GameObject currentcheckpoint;
+    public GameObject ball;
 
     // Use this for initialization
     void Start () {
@@ -22,15 +23,19 @@ public class BallMovement : MonoBehaviour {
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Checkpoint 1"))
+        if(other.gameObject.CompareTag("Checkpoint"))
         {
             currentcheckpoint = other.gameObject;
 
         }
-        else if(other.gameObject.CompareTag("Checkpoint 2"))
-        {
-            currentcheckpoint = other.gameObject;
+        if (other.gameObject.CompareTag("Bullet"))
+        { 
+           transform.position = currentcheckpoint.transform.position;
         }
         //This code is for when bullets hit the sphere
+    }
+    public void backToCheckPoint()
+    {
+        transform.position = currentcheckpoint.transform.position;
     }
 }

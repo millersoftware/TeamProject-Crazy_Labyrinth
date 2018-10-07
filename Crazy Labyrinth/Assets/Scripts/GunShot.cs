@@ -25,6 +25,7 @@ public class GunShot : MonoBehaviour
         bulletPrefab,
         transform.position,
         transform.rotation);
+        bulletPrefab.tag = "Bullet";
 
         // Add velocity to the bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.up * 6;
