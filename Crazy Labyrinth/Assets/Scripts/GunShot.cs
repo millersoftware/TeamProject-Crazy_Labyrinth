@@ -5,19 +5,19 @@ using UnityEngine;
 public class GunShot : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    float[] pattern = new float[]{3.0f, 2.0f, 4.0f};
-    float shootInterval;
-    float timeAc = 0.0f;
-    int patternTracker = 0;
+    float[] pattern = new float[]{1.0f, 0.5f, 2.0f}; // Change these numbers to change shooting pattern
+    float shootInterval; // Current delay time
+    float timeAc = 0.0f; // Time past since last shot
+    int patternTracker = 0; // Current delay being used
+    public Material coating; // Red material
 
     // Use this for initialization
     void Start()
     {
-        //InvokeRepeating("Fire", 1f, 4f);
         float shootInterval = pattern[patternTracker];
     }
 
-    // Update is called once per frame
+    // Update checks to see if it is time to shoot then calls fire when ready
     void Update()
     {
         if (Time.deltaTime + timeAc > shootInterval)
@@ -39,6 +39,7 @@ public class GunShot : MonoBehaviour
         transform.position,
         transform.rotation);
         bulletPrefab.tag = "Bullet";
+        bulletPrefab.GetComponent<MeshRenderer>().material = coating;
 
         // Add velocity to the bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.up * 6;
@@ -46,6 +47,7 @@ public class GunShot : MonoBehaviour
         // Destroys the bullet after 2 seconds
         Destroy(bullet, 2.0f);
 
+        // This loops the pattern array
         if(patternTracker == 2)
         {
             patternTracker = 0;
