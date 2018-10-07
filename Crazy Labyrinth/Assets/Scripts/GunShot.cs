@@ -5,16 +5,29 @@ using UnityEngine;
 public class GunShot : MonoBehaviour
 {
     public GameObject bulletPrefab;
+    float[] pattern = new float[]{3.0f, 2.0f, 4.0f};
+    float shootInterval;
+    float timeAc = 0.0f;
+    int patternTracker = 0;
 
     // Use this for initialization
     void Start()
     {
-        InvokeRepeating("Fire", 1f, 4f);
+        //InvokeRepeating("Fire", 1f, 4f);
+        float shootInterval = pattern[patternTracker];
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Time.deltaTime + timeAc > shootInterval)
+        {
+            timeAc = 0.0f;
+            Fire();
+        }
+
+        else
+            timeAc += Time.deltaTime;
     }
 
     void Fire()
@@ -31,5 +44,16 @@ public class GunShot : MonoBehaviour
 
         // Destroys the bullet after 2 seconds
         Destroy(bullet, 2.0f);
+
+        if(patternTracker == 2)
+        {
+            patternTracker = 0;
+            shootInterval = pattern[patternTracker];
+        }
+        else
+        {
+            patternTracker += 1;
+            shootInterval = pattern[patternTracker];
+        }
     }
 }
