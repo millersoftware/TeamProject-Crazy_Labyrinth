@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BallMovement : MonoBehaviour {
     public float speed;
@@ -29,10 +30,15 @@ public class BallMovement : MonoBehaviour {
 
         }
         if (other.gameObject.CompareTag("Bullet"))
-        { 
-           transform.position = currentcheckpoint.transform.position;
+        {
+            transform.position = currentcheckpoint.transform.position;
         }
-        //This code is for when bullets hit the sphere
+            if (other.gameObject.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene(1);
+        }
+
+
     }
     public void backToCheckPoint()
     {
