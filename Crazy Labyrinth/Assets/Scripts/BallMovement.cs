@@ -35,7 +35,7 @@ public class BallMovement : MonoBehaviour {
         }
             if (other.gameObject.CompareTag("Finish"))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("ScoreScreen");
         }
 
 
