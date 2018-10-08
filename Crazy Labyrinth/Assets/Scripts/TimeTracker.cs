@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class TimeTracker : MonoBehaviour {
     public static Dictionary<string, float> scoreDic = new Dictionary<string, float>();
+    public static int[] bestScore = new int[] { 0, 0, 0 };
     public float timeOf = 0.0f;
     public string sceneName;
     public static string previousScene;
+    public static int buildIndexScene;
     public GameObject time;
     public GameObject score;
     public GameObject highScore;
@@ -23,6 +25,7 @@ public class TimeTracker : MonoBehaviour {
         }
         else{
             previousScene = sceneName;
+            buildIndexScene = currentScene.buildIndex;
             
         }
         scoreDic.Add(sceneName, timeOf);
@@ -46,8 +49,16 @@ public class TimeTracker : MonoBehaviour {
         if(scoreDic[scene] < 500)
         {
            theScore = 500 - (int)(scoreDic[scene]);
+
+            if (bestScore[buildIndexScene] < theScore)
+            {
+                bestScore[buildIndexScene] = theScore;
+            }
         }
         st.text = "Score Acheived: " + theScore + "/500";
+
+        Text ht = highScore.GetComponent<Text>();
+        ht.text = "Highest: " + bestScore[buildIndexScene] +"/500";
 
     }
 }
