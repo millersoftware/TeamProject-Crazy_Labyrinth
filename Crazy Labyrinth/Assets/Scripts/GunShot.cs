@@ -14,8 +14,8 @@ public class GunShot : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        int randStart = Random.Range(0, 7);// Random start for each cannon
-        patternTracker = randStart;
+        // int randStart = Random.Range(0, 7); Uncomment this to have each gun start at a random place in the pattern
+        //patternTracker = randStart;
         float shootInterval = pattern[patternTracker];
     }
 
