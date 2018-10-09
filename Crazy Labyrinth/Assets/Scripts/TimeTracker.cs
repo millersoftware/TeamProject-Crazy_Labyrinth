@@ -28,7 +28,9 @@ public class TimeTracker : MonoBehaviour {
             buildIndexScene = currentScene.buildIndex;
             
         }
-        scoreDic.Add(sceneName, timeOf);
+        if (! scoreDic.ContainsKey(sceneName)){
+            scoreDic.Add(sceneName, timeOf);
+        }
 
 
     }
