@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunShot : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    float[] pattern = new float[]{1.0f, 1.0f, 1.0f, 3.0f, 1.0f, 1.0f, 6.0f}; // Change these numbers to change shooting pattern
+    float[] pattern = new float[] { 1.0f, 1.0f, 1.0f, 4.0f, 1.0f, 1.0f, 1.0f, 6.0f }; // Change these numbers to change shooting pattern
     float shootInterval; // Current delay time
     float timeAc = 0.0f; // Time past since last shot
     int patternTracker = 0; // Current delay being used
@@ -14,7 +14,7 @@ public class GunShot : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        int randStart = (int)Random.Range(0.0f, 6.0f);
+        int randStart = Random.Range(0, 7);// Random start for each cannon
         patternTracker = randStart;
         float shootInterval = pattern[patternTracker];
     }
@@ -50,7 +50,7 @@ public class GunShot : MonoBehaviour
         Destroy(bullet, 2.0f);
 
         // This loops the pattern array
-        if(patternTracker == 6)
+        if (patternTracker == 7)
         {
             patternTracker = 0;
             shootInterval = pattern[patternTracker];
