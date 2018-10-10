@@ -20,7 +20,15 @@ public class BallMovement : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        rb.AddForce(movement * speed);
+        if (moveHorizontal == 0.0f && moveVertical == 0.0f)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+        else
+        {
+            rb.velocity = (movement * speed);
+        }
     }
     void OnTriggerEnter(Collider other)
     {
