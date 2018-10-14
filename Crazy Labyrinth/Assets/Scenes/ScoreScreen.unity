@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 404899810}
   - component: {fileID: 404899809}
   m_Layer: 5
-  m_Name: Next Level
+  m_Name: NextLevelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 887214074}
   - component: {fileID: 887214073}
   m_Layer: 5
-  m_Name: Replay Level
+  m_Name: ReplayLevelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 1874504251}
   - component: {fileID: 1874504250}
   m_Layer: 5
-  m_Name: Main Menu
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
