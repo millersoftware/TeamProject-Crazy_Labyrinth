@@ -19,6 +19,16 @@ public class TimeTracker : MonoBehaviour {
     void Start () {
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
+
+        if (ChangeScene.current == 3)
+        {
+            GameObject.Find("NextLevelButton").SetActive(false);
+        }
+        else
+        {
+            GameObject.Find("NextLevelButton").SetActive(true);
+        }
+
         if (sceneName.Equals("ScoreScreen"))
         {
             getValues(previousScene);
