@@ -22,6 +22,7 @@ public class BallMovement : MonoBehaviour {
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rb.AddForce(movement * speed);
     }
+    //This code is used to determine collisons 
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Checkpoint"))
@@ -29,7 +30,7 @@ public class BallMovement : MonoBehaviour {
             currentcheckpoint = other.gameObject;
 
         }
-        if (other.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Hole"))
         {
             transform.position = currentcheckpoint.transform.position;
         }

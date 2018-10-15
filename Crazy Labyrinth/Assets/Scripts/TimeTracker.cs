@@ -5,21 +5,59 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimeTracker : MonoBehaviour {
-    public static Dictionary<string, float> scoreDic = new Dictionary<string, float>();
-    public static int[] bestScore = new int[] { 0, 0, 0 };
-    public float timeOf = 0.0f;
-    public string sceneName;
-    public static string previousScene;
-    public static int buildIndexScene;
-    public GameObject time;
-    public GameObject score;
-    public GameObject highScore;
+    public static Dictionary<string, float> scoreDic = new Dictionary<string, float>(); // Keeps Track of time for each level
+    public static int[] bestScore = new int[] { 0, 0, 0, 0 }; // Keeps track of best score
+    public float timeOf = 0.0f; //Time Tracker
+    public string sceneName; //Current Scene
+    public static string previousScene; //Used in getValues 
+    public static int buildIndexScene; //Used to find scene int number for bestScore array
+    public GameObject time; //Text
+    public GameObject score; //Text
+    public GameObject highScore; //Text
 
-    // Use this for initialization
+    /* 
+    * This code gathers valuable information and stores it, while also determing the next step of where this code should go.
+    * This code is used in each level ONLY, while also pointing to getValues if it's current ScoreScreen
+    */
     void Start () {
+        //Captures current scene
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
 
+        //When in ScoreScreen prevent it from going in dictonary
+        if (sceneName.Equals("ScoreScreen"))
+        {
+            getValues(previousScene);//Calls getvalues method when in score screen
+        }
+        //Record other information about the scene
+        else{
+            previousScene = sceneName;
+            buildIndexScene = currentScene.buildIndex;
+            
+        }
+        //Create Dictonary entries
+        if (! scoreDic.ContainsKey(sceneName)){
+            scoreDic.Add(sceneName, timeOf);
+        }
+
+
+    }
+
+    /* 
+     * This code is used in levels and keeps track of time completed
+     */
+    void Update () {
+        timeOf = Time.timeSinceLevelLoad;//Tracks time since level has been loaded
+        scoreDic[sceneName] = timeOf;
+    }
+    /* 
+     * This code is used to update Text in ScoreScreen
+     * This code is used in ScoreScreen ONLY
+     * @param scene: Gives scene of level being scored
+     */
+    void getValues(string scene)
+    {
+        //Code to Prevent NextLevel at level 3
         if (ChangeScene.current == 3)
         {
             GameObject.Find("NextLevelButton").SetActive(false);
@@ -28,34 +66,11 @@ public class TimeTracker : MonoBehaviour {
         {
             GameObject.Find("NextLevelButton").SetActive(true);
         }
-
-        if (sceneName.Equals("ScoreScreen"))
-        {
-            getValues(previousScene);
-        }
-        else{
-            previousScene = sceneName;
-            buildIndexScene = currentScene.buildIndex;
-            
-        }
-        if (! scoreDic.ContainsKey(sceneName)){
-            scoreDic.Add(sceneName, timeOf);
-        }
-
-
-    }
-	
-	// Update is called once per frame
-	void Update () {
-        timeOf = Time.timeSinceLevelLoad;//Tracks time since level has been loaded
-        scoreDic[sceneName] = timeOf;
-    }
-
-
-    void getValues(string scene)
-    {
+        //Code for Time Text
         Text tt = time.GetComponent<Text>();
         tt.text = "Time Acheived: " + (int)scoreDic[scene] + " Seconds";
+
+        //Code for Score Text (also calculates score)
         Text st = score.GetComponent<Text>();
         int theScore = 0;
         if(scoreDic[scene] < 500)
@@ -69,6 +84,7 @@ public class TimeTracker : MonoBehaviour {
         }
         st.text = "Score Acheived: " + theScore + "/500";
 
+        //Code for High Score
         Text ht = highScore.GetComponent<Text>();
         ht.text = "Highest: " + bestScore[buildIndexScene] +"/500";
 

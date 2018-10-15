@@ -7,6 +7,7 @@ TagManager:
   - Checkpoint
   - Bullet
   - Blocker
+  - Hole
   layers:
   - Default
   - TransparentFX
