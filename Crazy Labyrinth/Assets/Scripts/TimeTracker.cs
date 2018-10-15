@@ -14,6 +14,7 @@ public class TimeTracker : MonoBehaviour {
     public GameObject time; //Text
     public GameObject score; //Text
     public GameObject highScore; //Text
+    public GameObject newScore;
 
     /* 
     * This code gathers valuable information and stores it, while also determing the next step of where this code should go.
@@ -79,6 +80,11 @@ public class TimeTracker : MonoBehaviour {
 
             if (bestScore[buildIndexScene] < theScore)
             {
+                if(bestScore[buildIndexScene] != 0)
+                {
+                    Text nt = newScore.GetComponent<Text>();
+                    nt.text = "NEW HIGH SCORE";
+                }
                 bestScore[buildIndexScene] = theScore;
             }
         }
