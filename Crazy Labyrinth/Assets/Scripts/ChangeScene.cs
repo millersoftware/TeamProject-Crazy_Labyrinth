@@ -5,20 +5,19 @@ using UnityEngine.SceneManagement;
 /*
 * This class is only used for buttons to change scenes
 */
-
 public class ChangeScene : MonoBehaviour {
-    public static int current = 1;
-    public void Change(string scene)
+    public static int CURRENT = 1;
+    public void Change(string scene) // Start Button
     {
         SceneManager.LoadScene(scene);
     }
-    public void ChangeToNextLevel()
+    public void ChangeToNextLevel() // Next Level Button
     {
-        current += 1;
-        SceneManager.LoadScene(current);
+        CURRENT += 1;
+        SceneManager.LoadScene(CURRENT);
     }
-    public void KeepLevel()
+    public void KeepLevel() //Current Level Button
     {
-        SceneManager.LoadScene(current);
+        SceneManager.LoadScene(CURRENT);
     }
 }
