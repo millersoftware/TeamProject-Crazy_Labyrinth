@@ -1219,7 +1219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!1 &164400279
 GameObject:
   m_ObjectHideFlags: 0
@@ -3455,7 +3455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!136 &596388635
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3641,7 +3641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!136 &623845699
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3797,7 +3797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!1 &643347673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3843,7 +3843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!136 &643347676
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4240,7 +4240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!1 &676238519
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,7 +4527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!136 &776269949
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5195,7 +5195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!1 &870512791
 GameObject:
   m_ObjectHideFlags: 0
@@ -5836,7 +5836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!136 &1086944573
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6178,7 +6178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!136 &1125198374
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6836,7 +6836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!1 &1244581655
 GameObject:
   m_ObjectHideFlags: 0
@@ -8831,7 +8831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!1 &1547545021
 GameObject:
   m_ObjectHideFlags: 0
@@ -9566,7 +9566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!1001 &1614718355
 Prefab:
   m_ObjectHideFlags: 0
@@ -10280,7 +10280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!1 &1663246902
 GameObject:
   m_ObjectHideFlags: 0
@@ -10496,7 +10496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!136 &1682872230
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11897,7 +11897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!136 &1945062528
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12669,7 +12669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1141011795769746, guid: 3ea0c34abaa547d418763c90dbb3ab87,
     type: 2}
-  coating: {fileID: 2100000, guid: 7f07a0c68827a094d9b64471b66e5b93, type: 2}
+  coating: {fileID: 2100000, guid: 5602019115355d34091191ce99b8a14f, type: 2}
 --- !u!136 &2057417846
 CapsuleCollider:
   m_ObjectHideFlags: 0
