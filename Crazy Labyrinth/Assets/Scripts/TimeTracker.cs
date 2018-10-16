@@ -74,11 +74,17 @@ public class TimeTracker : MonoBehaviour {
         //Code for Score Text (also calculates score)
         Text st = score.GetComponent<Text>();
         int theScore = 0;
-        if(scoreDic[scene] < 500)
+        if (scoreDic[scene] < 450)
         {
-           theScore = 500 - (int)(scoreDic[scene]);
+            theScore = 500 - (int)(scoreDic[scene]);
+        }
+        else
+        {
+            theScore = 50;
+        }
+        st.text = "Score Acheived: " + theScore + "/500";
 
-            if (bestScore[buildIndexScene] < theScore)
+        if (bestScore[buildIndexScene] < theScore)
             {
                 if(bestScore[buildIndexScene] != 0)
                 {
@@ -87,8 +93,7 @@ public class TimeTracker : MonoBehaviour {
                 }
                 bestScore[buildIndexScene] = theScore;
             }
-        }
-        st.text = "Score Acheived: " + theScore + "/500";
+        
 
         //Code for High Score
         Text ht = highScore.GetComponent<Text>();
