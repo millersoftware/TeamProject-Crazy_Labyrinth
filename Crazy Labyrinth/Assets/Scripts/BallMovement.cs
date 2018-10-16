@@ -5,36 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class BallMovement : MonoBehaviour {
     public float speed;
-    private Rigidbody rb;
-    private GameObject currentcheckpoint;
+    private Rigidbody _rb;
+    private GameObject _currentCheckpoint;
     public GameObject ball;
 
     // Use this for initialization
     void Start () {
-        rb = GetComponent<Rigidbody>(); //Gets access Rigidbody
+        _rb = GetComponent<Rigidbody>(); // Gets access Rigidbody
     }
 	
 	// Update is called once per frame
 	void Update () {
-        //This code is used so that player input can move the ball
+        // This code is used so that player input can move the ball
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        rb.AddForce(movement * speed);
+        _rb.AddForce(movement * speed);
     }
-    //This code is used to determine collisons 
+    // This code is used to determine collisons 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Checkpoint"))
+        if(other.gameObject.CompareTag("Checkpoint")) // If Ball Hits Checkpoint
         {
-            currentcheckpoint = other.gameObject;
+            _currentCheckpoint = other.gameObject;
 
         }
-        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Hole"))
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Hole")) // If ball hits bullet or hole go back to checkpoint
         {
-            transform.position = currentcheckpoint.transform.position;
+            transform.position = _currentCheckpoint.transform.position;
         }
-            if (other.gameObject.CompareTag("Finish"))
+            if (other.gameObject.CompareTag("Finish"))// End screen
         {
             SceneManager.LoadScene("ScoreScreen");
         }
@@ -43,6 +43,6 @@ public class BallMovement : MonoBehaviour {
     }
     public void backToCheckPoint()
     {
-        transform.position = currentcheckpoint.transform.position;
+        transform.position = _currentCheckpoint.transform.position;
     }
 }
