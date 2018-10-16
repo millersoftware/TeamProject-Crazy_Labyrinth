@@ -59,7 +59,7 @@ public class TimeTracker : MonoBehaviour {
     void getValues(string scene)
     {
         //Code to Prevent NextLevel at level 3
-        if (ChangeScene.current == 3)
+        if (previousScene.Equals("LVL_3"))
         {
             GameObject.Find("NextLevelButton").SetActive(false);
         }
